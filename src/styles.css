@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --gray700: #334155;
+  --gray600: #475569;
+  --gray500: #64748b;
+  --white: #ffffff;
+  --gray400: #94a3b8;
+  --gray300: #cbd5e1;
+  --sidebar-width: 250px;
+}
+
+.container {
+  display: flex;
+  background-color: var(--gray700);
+}
+
+.sidebar {
+  background-color: var(--gray500);
+  width: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 15px;
+  padding: 20px;
+  color: var(--gray300);
+}
+.card {
+  background-color: var(--gray600);
+  width: calc(100vw - var(--sidebar-width) - 40px);
+  height: 40vh;
+  margin: 20px;
+  padding: 20px;
+}
+.card:hover {
+  background-color: var(--gray500);
+}
+.title {
+  align-self: center;
+  color: var(--gray300);
+}
+
+.header {
+  color: var(--gray300);
+  font-weight: 900;
+  align-self: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+a {
+  margin-left: 10px;
+  color: var(--gray300);
+}
+a:hover {
+  color: var(--gray400);
+}
+
+.card-header {
+  color: var(--gray400);
+}
+.card-header i {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--gray400);
+  color: white;
+  margin-right: 10px;
+}
+.card-body {
+  margin-top: 30px;
+  color: var(--white);
+}
+.resume .func .work,
+.card-body {
+  float: left;
+}
+
+.card-body small {
+  display: block;
+  opacity: 0.7;
+}
+
+.card-body ul li {
+  position: relative;
+  margin-left: 15px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+}
+
+.card-body ul li:hover span {
+  color: var(--gray300);
+}
+
+.card-body ul li:last-of-type {
+  padding-bottom: 3px;
+}
+
+.card-body ul li:last-of-type::after {
+  border-radius: 1.5px;
+}
+
+.resume .func .work ul li::after,
+.card-body ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.card-body ul li::after {
+  width: 3px;
+  height: 100%;
+  background: var(--white);
+  left: 5px;
+  top: 0;
+}
+
+.card-body ul li span {
+  transition-duration: 0.3s;
+}
